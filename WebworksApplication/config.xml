@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ * Copyright 2012 Interchange Global Ltd.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "Licence");  you may not use this file except in compliance with the Licence.
+ * You may obtain a copy of the Licence at
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * Unless required by applicable law or agreed to in writing, software distributed under the Licence is distributed on an "AS IS" basis, without warranties or conditions of any kind, either express or implied.
+ * See the Licence for the specific language governing permissions and limitations under the Licence.
+-->
+
+<widget xmlns="http://www.w3.org/ns/widgets"
+        xmlns:rim="http://www.blackberry.com/ns/widgets"
+	version="1.0.0" id="tMinus">
+
+  <name>tMinus</name>
+
+  <author>Interchange Global Ltd</author>
+
+  <description>
+       Countdown application.
+  </description>
+    
+  <license href="http://opensource.org/licenses/alphabetical"/>
+
+  
+<feature id="blackberry.app" required="true" version="1.0.0.0" />
+<feature id="blackberry.identity" required="true" version="1.0.0.0" />
+<feature id="blackberry.system" required="true" version="1.0.0.0" />
+<feature id="com.interchangegroup.ext.cover" required="true" version="1.0.0.0"/>
+
+  <access subdomains="false" uri="http://channels.interchangegroup.com" />
+
+  <rim:loadingScreen backgroundColor="#ffffff"
+                     foregroundImage="res/screen/blackberry/logo.gif"
+		     onFirstLaunch="true">
+    <rim:transitionEffect type="fadeOut" />
+  </rim:loadingScreen>
+
+  <content src="index.html" />
+  <rim:navigation mode="focus" />
+  
+  <rim:permissions>
+    <rim:permit>run_when_backgrounded</rim:permit>
+</rim:permissions>
+
+    <rim:connection timeout="3000">
+        <id>BIS-B</id>
+        <id>TCP_WIFI</id>
+        <id>MDS</id>
+        <id>TCP_CELLULAR</id>
+    </rim:connection>
+
+</widget>

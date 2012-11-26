@@ -1,0 +1,21 @@
+{
+    "target" : "January, 30, 2013",
+    "graphicUrl" : "./img/BB10Nologo.png",
+	"defaultBackground" : "url(./img/TminusBGD1280Grey.png) repeat",
+    "periods" : [
+        {
+            "cutoffDay" : 60,
+            "backgroundStyle" : "url(./img/TminusBGD1280Green.png) repeat"
+        },
+        {
+            "cutoffDay" : 29,
+            "backgroundStyle" : "url(./img/TminusBGD1280Amber.png) repeat"
+        },
+        {
+            "cutoffDay" : 0,
+            "backgroundStyle" : "url(./img/TminusBGD1280Red.png) repeat"
+        }
+    ],
+    "ignoreDays" : [ 2,3,9,10,16,17,23,24,28,30,31,34,35,37,38,44,45,51,52,58,59,65,66,72,73,79,80,86,87]
+
+}

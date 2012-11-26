@@ -1,0 +1,120 @@
+/*
+ * Copyright 2012 Interchange Global Ltd.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "Licence");  you may not use this file except in compliance with the Licence.
+ * You may obtain a copy of the Licence at
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * Unless required by applicable law or agreed to in writing, software distributed under the Licence is distributed on an "AS IS" basis, without warranties or conditions of any kind, either express or implied.
+ * See the Licence for the specific language governing permissions and limitations under the Licence.
+ */
+
+body {
+	font-family:helvetica,arial,verdana,serif;
+	background-color:white;
+	color:white;
+	text-align:center;
+}
+
+.daybox {
+    opacity:0.9;
+    background: url(../img/FlipBoardDark.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    vertical-align:middle;
+	display:inline-block;
+    padding-top:2.5em;
+    padding-bottom:2em;
+    margin: 0.5em 2em 0em;
+    min-width: 13em;
+    min-height: 8em;
+}
+
+.hourbox {
+    vertical-align:middle;
+	display:inline-block;
+    opacity:0.5;
+    margin: 0.5em 2em 0em;
+    min-width: 10em;
+}
+
+
+.numbers {
+	font-size:7em;
+	display:block;
+    line-height: 1em;
+}
+
+.words {
+    font-size:1.5em;
+    display:block;
+    line-height: 1em;
+}
+
+.graphicLeft {
+    /* assume 358x51 */
+    /* left would be -358/2 + 51/2 */
+    /*               -179   + 25   */
+	display:none;
+	opacity:0;
+    position:fixed;
+    left:-154px;
+    top: 130px;
+    z-index:1;
+    -webkit-transform: rotate(90deg) scale(0.8);
+	-webkit-transition: opacity;
+	-webkit-transition-duration: 2000ms;
+}
+
+.graphicRight {
+    display:none;
+    opacity:0;
+    position:fixed;
+    right: -154px;
+    bottom: 130px;
+    z-index:1;
+    -webkit-transform: rotate(-90deg) scale(0.8);
+    -webkit-transition: opacity;
+    -webkit-transition-duration: 2000ms;
+}
+
+.debug {
+    font-size: 0.75em;
+    color:#32cd32;
+}
+.eula {
+	color:black;
+	text-align: left;
+	display:none;
+}
+
+.app {
+	display:none;
+}
+
+.box {
+    padding: 2em 1em 0em;
+}
+
+.shader {
+    position:absolute;
+    top:0px;
+    left:0px;
+    z-index:-1;
+    width:100%;
+    height:100%;
+
+    background-image: linear-gradient(top, rgba(255,255,255,0.5) 0%, rgba(0,0,0,0.3) 15%, rgba(255,255,255,0) 100%);
+    background-image: -o-linear-gradient(top, rgba(255,255,255,0.5) 0%, rgba(0,0,0,0.3) 15%, rgba(255,255,255,0) 100%);
+    background-image: -moz-linear-gradient(top, rgba(255,255,255,0.5) 0%, rgba(0,0,0,0.3) 15%, rgba(255,255,255,0) 100%);
+    background-image: -webkit-linear-gradient(top, rgba(255,255,255,0.5) 0%, rgba(0,0,0,0.3) 15%, rgba(255,255,255,0) 100%);
+    background-image: -ms-linear-gradient(top, rgba(255,255,255,0.5) 0%, rgba(0,0,0,0.3) 15%, rgba(255,255,255,0) 100%);
+
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0.0, rgba(255,255,255,0.5)),
+        color-stop(0.15, rgba(0,0,0,0.3)),
+        color-stop(1, rgba(255,255,255,0))
+ s   );
+}
